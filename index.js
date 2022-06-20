@@ -8,7 +8,7 @@ const fs = require("fs")
 async function checkSetup(){
     var output = ""
     if (fs.existsSync("./node_modules")){
-
+        if(fs.ex)
     }
     //If the folder node_modules does not exist, that means no libraries are installed
     else{
