@@ -14,13 +14,13 @@ async function checkSetup(){
     if (fs.existsSync("/node_modules")){
         //Checking if discord.js is installed with the right version
         if(fs.existsSync(`./node_modules/${discordLib}`)){
-              var discordPackageFile = fs.readFileSync("./node_modules/discord.js/package.json")
-              discordPackageFile = JSON.parse(discordPackageFile)
-              if(discordPackageFile.version.includes("12") == false){
+            var discordPackageFile = fs.readFileSync("./node_modules/discord.js/package.json")
+            discordPackageFile = JSON.parse(discordPackageFile)
+            if(discordPackageFile.version.includes("12") == false){
                 console.log(`Wrong version of ${discordLib} is installed, reinstalling correct version`)
                 await exec("npm uninstall discord.js")
                 installOutput.concat(` ${discordLib}@${discordLibVer}`)
-              }
+            }
         }
         else{
             console.log(`${discordLib} is not installed, Instaling...`)
