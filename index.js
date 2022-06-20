@@ -9,9 +9,9 @@ async function checkSetup(){
     var discordLib = "discord.js"
     var discordLibVer = "12"
     var apiLib = "axios"
-    var discordVoiceLib
+    var discordVoiceLib = "opusscript"
     var installOutput = ""
-    if (fs.existsSync("./node_modules")){
+    if (fs.existsSync("/node_modules")){
         //Checking if discord.js is installed with the right version
         if(fs.existsSync(`./node_modules/${discordLib}`)){
               var discordPackageFile = fs.readFileSync("./node_modules/discord.js/package.json")
